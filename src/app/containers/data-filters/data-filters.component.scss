@@ -1,0 +1,26 @@
+:host {
+  display: inline-block;
+  width: 300px;
+}
+
+.accordion {
+  &__panel {
+    box-shadow: none;
+    border: 1px solid gray;
+    border-radius: 0 !important;
+
+    &__description {
+      align-items: center;
+    }
+
+    &__remove-button-container {
+      margin: 0;
+      justify-content: right;
+    }
+  }
+}
+
+.button-row {
+  margin-top: 20px;
+  text-align: right;
+}

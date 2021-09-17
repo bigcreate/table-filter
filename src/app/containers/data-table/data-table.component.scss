@@ -1,0 +1,24 @@
+.wrapper {
+  height: 300px;
+}
+
+.table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.header-cell {
+  min-width: 150px;
+}
+
+.body-cell {
+  padding: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

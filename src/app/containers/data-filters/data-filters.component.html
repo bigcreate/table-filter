@@ -1,0 +1,26 @@
+<mat-accordion class="accordion" multi>
+  <ng-container *ngFor="let filter of filters; index as i; trackBy: trackByFilter">
+    <mat-expansion-panel class="accordion__panel" [hideToggle]="true">
+      <mat-expansion-panel-header>
+        <ng-container>
+          <mat-panel-title class="accordion__panel__description">
+            "{{filter.columnName}}" : "{{filter.operator}}" : "{{filter.value}}"
+          </mat-panel-title>
+          <mat-panel-description class="accordion__panel__remove-button-container">
+            <button mat-icon-button aria-label="Delete filter" (click)="deleteFilter(i); $event.stopPropagation()">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </mat-panel-description>
+        </ng-container>
+
+      </mat-expansion-panel-header>
+      <pup-filter [columns]="columnNames$ | async" [filter]="filter" (filterChanged)="filterChange($event, i)"></pup-filter>
+    </mat-expansion-panel>
+  </ng-container>
+</mat-accordion>
+<section>
+  <div class="button-row">
+    <button mat-button (click)="createFilter()">Create Filter</button>
+    <button mat-button (click)="saveFilters()">Save All Filters</button>
+  </div>
+</section>

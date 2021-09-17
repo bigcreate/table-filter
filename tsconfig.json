@@ -2,7 +2,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "src",
+    "baseUrl": "./src",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
@@ -20,10 +20,12 @@
       "es2018",
       "dom"
     ],
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
     "paths": {
-      "@pup": ["app/*"],
-      "@env": ["environments/*"],
-      "@assets": ["assets/*"],
+      "@pup/*": ["app/*"],
+      "@env/*": ["environments/*"],
+      "@assets/*": ["assets/*"],
     }
   },
   "angularCompilerOptions": {
